@@ -4,12 +4,12 @@ const { DataService } = require("../Services/DataCollection.Service");
 const { WriteJSON } = require("../utilities/Json.util");
 
 const DelCharCtrlFunc = (req, res) => {
-    const {userName} = req.body;
-    const CharRes = DataService();
-    const CharItems = CharRes.items;
-    CharItems.pop(userName)
-    WriteJSON(DefaultFilePath, CharItems)
-    res.status(200).json(characters)
-}
+  const { userName } = req.body;
+  const CharRes = DataService();
+  const CharItems = CharRes;
+  const FilteredData = CharItems.filter((item) => item.name !== userName);
+  WriteJSON(DefaultFilePath, FilteredData);
+  res.status(200).json(characters);
+};
 
-module.exports = {DelCharCtrlFunc}
+module.exports = { DelCharCtrlFunc };

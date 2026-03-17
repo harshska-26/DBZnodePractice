@@ -6,7 +6,7 @@ const { WriteJSON } = require("../utilities/Json.util");
 const AddCharCtrl = (req, res) => {
   const CharRes = DataService();
   const payload = req.body;
-  CharRes.items.push(payload);
+  CharRes.push(payload);
   WriteJSON(DefaultFilePath, CharRes);
   res.status(200).json(characters)
 };

@@ -1,17 +1,17 @@
 const { MissingFieldFunc } = require("../utilities/missin.util");
 
+const requiredFields = [
+"id",
+"name",
+"ki",
+"maxKi",
+"race",
+"gender",
+"description",
+"image",
+"affiliation",
+];
 const CharValidFunc = (req, res, next) => {
-    const requiredFields = [
-    "id",
-    "name",
-    "ki",
-    "maxKi",
-    "race",
-    "gender",
-    "description",
-    "image",
-    "affiliation",
-  ];
 
   const MissingFields = MissingFieldFunc(requiredFields, req.body);
   if(MissingFields){
@@ -25,4 +25,4 @@ const CharValidFunc = (req, res, next) => {
   next();
 }
 
-module.exports = {CharValidFunc}
+module.exports = {requiredFields, CharValidFunc}

@@ -12,7 +12,7 @@ const ReadJSON = (path) => {
 
 const WriteJSON = (path, data) => {
   try {
-    const writefile = fs.writeFileSync(path, JSON.stringify(data));
+    fs.writeFileSync(path, JSON.stringify(data));
     return true;
   } catch (error) {
     console.log(`Error: ${error}`);
