@@ -1,29 +1,22 @@
 {
-  "name": "dbznode",
+  "name": "dbznodepractice",
   "version": "1.0.0",
-  "description": "Dragon Ball API node ",
-  "keywords": [
-    "DBZ",
-    "Node",
-    "API"
-  ],
-  "homepage": "https://github.com/harshska-26/DBZnodePractice#readme",
-  "bugs": {
-    "url": "https://github.com/harshska-26/DBZnodePractice/issues"
+  "main": "Characters.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/harshska-26/DBZnodePractice.git"
   },
+  "author": "",
   "license": "ISC",
-  "author": "Harshith",
-  "type": "commonjs",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
-
+  "bugs": {
+    "url": "https://github.com/harshska-26/DBZnodePractice/issues"
   },
+  "homepage": "https://github.com/harshska-26/DBZnodePractice#readme",
+  "description": "",
   "dependencies": {
     "express": "^5.2.1",
     "nodemon": "^3.1.14"
